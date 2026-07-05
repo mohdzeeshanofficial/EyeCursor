@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>EyeCursor Dashboard</title>
+<style>
+body{
+background:#050816;
+color:rgb(241, 251, 245);
+font-family:Segoe UI;
+margin:0;
+}
+
+.sidebar{
+width:250px;
+height:100vh;
+background:#0d1227;
+position:fixed;
+left:0;
+top:0;
+padding:20px;
+}
+
+.sidebar h2{
+color:#7a5fff;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:15px 0;
+}
+
+.main{
+margin-left:270px;
+padding:40px;
+}
+
+.card{
+background:#0d1227;
+padding:20px;
+border-radius:15px;
+margin-bottom:20px;
+text-align: center;
+}
+
+button{
+padding:12px 25px;
+background:#7a5fff;
+border:none;
+border-radius:10px;
+color:white;
+cursor:pointer;
+}
+
+</style>
+</head>
+
+<body>
+<div class="sidebar">
+<h2>EyeCursor</h2>
+<i>Moment were working on computer is easy. and  to control the cursor with eyes.</i><br><br>
+<a href="#">Dashboard</a>
+<a href="#">Eye Tracking</a>
+<a href="#">Guide</a>
+<a href="#">Settings</a>
+</div>
+
+<div class="main">
+
+<h1>EYES-CURSOR<br></h1>
+</h1>
+
+<div class="card">
+<h2>Start working</h2>
+<p>Click the button below to start eye tracking.</p>
+<form action="/start" method="get"><button type="submit">Start Tracking</button></form>
+<script>
+function startPython() {
+    fetch("/start")
+}
+</script>
+</div>
+
+<div class="card">
+<h2>Stop Tracking</h2>
+<p>Click the button below to stop eye tracking.</p>
+<button type="submit">Stop Tracking</button></form>
+
+</div>
+</div>
+</div>
+
+<script>
+document.getElementById("user").innerText =
+localStorage.getItem("username");
+</script>
+
+</body>
+</html>

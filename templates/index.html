@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EyeCursor</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+
+<header>
+<div class="logo">👁 EyeCursor</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#features">Features</a>
+<a href="#guide">Guide</a>
+<a href="#about">About</a> 
+</nav>
+
+<div>
+<button class="btn sign" onclick="openLogin()">Sign In</button>
+<button class="btn register" onclick="openRegister()">Register</button>
+<button class="btn theme" onclick="toggleTheme()">🌙</button>
+</div>
+</header>
+
+<section class="hero">
+
+<div class="left">
+<div class="tag">AI POWERED • EYE TRACKING TECHNOLOGY</div>
+
+<h1>
+Control Your Cursor<br>
+With Your <span>Eyes</span>
+</h1>
+
+<p>
+EyeCursor uses advanced eye-tracking technology to control
+the mouse cursor through eye movements. Fast, accurate,
+hands-free computing experience.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn demo">Watch Demo</button>
+</div>
+</div>
+
+<div class="right">
+<div class="eye"></div>
+</div>
+
+</section>
+
+<section id="features" class="features">
+<h2 class="title">Features</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>High Accuracy</h3>
+<p>Precise eye tracking for smooth cursor movement.</p>
+</div>
+
+<div class="card">
+<h3>Real-Time Tracking</h3>
+<p>Ultra-low latency eye detection and cursor control.</p>
+</div>
+
+<div class="card">
+<h3>Blink Click</h3>
+<p>Blink your eye to perform mouse clicks naturally.</p>
+</div>
+
+<div class="card">
+<h3>Privacy First</h3>
+<p>All processing remains on your local machine.</p>
+</div>
+
+</div>
+</section>
+
+<section id="guide" class="guide">
+<h2 class="title">How It Works</h2>
+
+<div class="steps">
+
+<div class="step">
+<h3>1. Open Camera</h3>
+<p>Allow webcam access.</p>
+</div>
+
+<div class="step">
+<h3>2. Eye Detection</h3>
+<p>MediaPipe tracks eye landmarks.</p>
+</div>
+
+<div class="step">
+<h3>3. Cursor Movement</h3>
+<p>Eye movements control cursor direction.</p>
+</div>
+
+<div class="step">
+<h3>4. Blink Click</h3>
+<p>Blink to perform left-click actions.</p>
+</div>
+
+</div>
+</section>
+
+<section id="about" class="about">
+<h2 class="title">About EyeCursor</h2>
+
+<p>
+EyeCursor is an AI-powered accessibility project built using
+OpenCV, MediaPipe and PyAutoGUI to help users control
+computers through eye movements.
+</p>
+</section>
+
+<footer>
+Developed by <b>Mohd Zeeshan</b><br><br>
+&copy; 2026 EyeCursor. All rights reserved.
+
+</footer>
+
+<!-- LOGIN -->
+<div class="modal" id="loginModal">
+<div class="modal-content">
+<span class="close" onclick="closeLogin()">×</span>
+
+<h2>Sign In</h2>
+
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+
+<buttton class="submit">Sign In</button>
+</div>
+</div>
+
+<!-- REGISTER -->
+<div class="modal" id="registerModal">
+<div class="modal-content">
+<span class="close" onclick="closeRegister()">×</span>
+
+<h2>Create Account</h2>
+
+<input type="text" placeholder="Full Name">
+<input type="email" placeholder="Email">
+<input type="password" placeholder="Password">
+<input type="password" placeholder="Confirm Password">
+<form action="/dashboard" method="get"><button class="submit" >Register</button></form>
+</div>
+</div>
+
+<script src="{{ url_for('static', filename='eyescript.js') }}"></script>
+</body>
+</html>
